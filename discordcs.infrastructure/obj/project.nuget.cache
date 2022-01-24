@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zXj8QoR3LEvB4Ms7FkqSQwkqcEyiGSfiYk8M3mwRXOjs4o5+27nKp2touXlyG9+1E6pv42xhVPNJVS5wh+cYUA==",
+  "success": true,
+  "projectFilePath": "/home/vsohier/repos/csworkspace/discordcs/discordcs.infrastructure/discordcs.infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/vsohier/.nuget/packages/ardalis.smartenum/2.0.1/ardalis.smartenum.2.0.1.nupkg.sha512",
+    "/home/vsohier/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/vsohier/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
