@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.user
+namespace Discordcs.Core.Interfaces.User
 {
 	public interface IUser
 	{

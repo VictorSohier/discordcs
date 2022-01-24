@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.integration;
+using Discordcs.Core.Interfaces.Integration;
 
-namespace Discordcs.core.models.integration
+namespace Discordcs.Core.Models.Integration
 {
 	public class IntegrationAccount : IIntegrationAccount
 	{

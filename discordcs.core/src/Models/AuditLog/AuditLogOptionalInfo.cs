@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.auditLog;
+using Discordcs.Core.Interfaces.AuditLog;
 
-namespace Discordcs.core.models.auditLog
+namespace Discordcs.Core.Models.AuditLog
 {
 	public class AuditLogOptionalInfo : IAuditLogOptionalInfo
 	{

@@ -1,7 +1,7 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.guild.scheduledEvent
+namespace Discordcs.Core.Interfaces.Guild.ScheduledEvent
 {
 	public interface IGuildScheduledEvent
 	{

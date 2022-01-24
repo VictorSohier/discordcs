@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.presence
+namespace Discordcs.Core.Interfaces.Presence
 {
 	public interface IPresenceUpdate
 	{

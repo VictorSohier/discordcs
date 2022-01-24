@@ -1,8 +1,8 @@
-using Discordcs.core.interfaces.channel;
-using Discordcs.core.interfaces.guild;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Channel;
+using Discordcs.Core.Interfaces.Guild;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.webhook
+namespace Discordcs.Core.Interfaces.Webhook
 {
 	public interface IWebhook
 	{

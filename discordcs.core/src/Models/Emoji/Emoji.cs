@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.emoji;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Emoji;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.emoji
+namespace Discordcs.Core.Models.Emoji
 {
 	public class Emoji : IEmoji
 	{

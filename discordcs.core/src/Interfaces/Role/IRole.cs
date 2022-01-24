@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.role
+namespace Discordcs.Core.Interfaces.Role
 {
 	public interface IRole
 	{

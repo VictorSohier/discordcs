@@ -1,8 +1,8 @@
-using Discordcs.core.interfaces.channel;
-using Discordcs.core.interfaces.channel.thread;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Channel;
+using Discordcs.Core.Interfaces.Channel.Thread;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.channel
+namespace Discordcs.Core.Models.Channel
 {
 	public class Channel : IChannel
 	{

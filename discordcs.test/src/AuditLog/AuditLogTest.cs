@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces;
-using Discordcs.core.interfaces.auditLog;
-using Discordcs.core.models.auditLog;
-using Discordcs.infrastructure.models;
+using Discordcs.Core.Interfaces;
+using Discordcs.Core.Interfaces.AuditLog;
+using Discordcs.Core.Models.AuditLog;
+using Discordcs.Infrastructure.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

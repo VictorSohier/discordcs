@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.emoji
+namespace Discordcs.Core.Interfaces.Emoji
 {
 	public interface IEmoji
 	{

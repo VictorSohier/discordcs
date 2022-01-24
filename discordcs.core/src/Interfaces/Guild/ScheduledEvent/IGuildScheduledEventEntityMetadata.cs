@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.guild.scheduledEvent
+namespace Discordcs.Core.Interfaces.Guild.ScheduledEvent
 {
 	public interface IGuildScheduledEventEntityMetadata
 	{

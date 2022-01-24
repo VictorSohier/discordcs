@@ -1,8 +1,8 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.integration;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.Integration;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.integration
+namespace Discordcs.Core.Models.Integration
 {
 	public class Integration : IIntegration
 	{

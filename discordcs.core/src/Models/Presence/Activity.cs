@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.emoji;
-using Discordcs.core.interfaces.presence;
+using Discordcs.Core.Interfaces.Emoji;
+using Discordcs.Core.Interfaces.Presence;
 
-namespace Discordcs.core.models.presence
+namespace Discordcs.Core.Models.Presence
 {
 	public class Activity : IActivity
 	{

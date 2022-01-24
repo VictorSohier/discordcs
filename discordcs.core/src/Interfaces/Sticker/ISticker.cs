@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.sticker
+namespace Discordcs.Core.Interfaces.Sticker
 {
 	public interface ISticker : IComparable<ISticker>
 	{

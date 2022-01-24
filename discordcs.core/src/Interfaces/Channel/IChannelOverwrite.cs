@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.channel
+namespace Discordcs.Core.Interfaces.Channel
 {
 	public interface IChannelOverwrite
 	{

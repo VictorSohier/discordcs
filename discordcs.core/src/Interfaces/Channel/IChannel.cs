@@ -1,8 +1,8 @@
-using Discordcs.core.interfaces.channel.thread;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Channel.Thread;
+using Discordcs.Core.Interfaces.User;
 using System;
 
-namespace Discordcs.core.interfaces.channel
+namespace Discordcs.Core.Interfaces.Channel
 {
 	public interface IChannel
 	{

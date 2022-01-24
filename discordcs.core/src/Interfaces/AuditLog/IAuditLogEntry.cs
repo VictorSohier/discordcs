@@ -1,6 +1,6 @@
-using Discordcs.core.enums;
+using Discordcs.Core.Enums;
 
-namespace Discordcs.core.interfaces.auditLog
+namespace Discordcs.Core.Interfaces.AuditLog
 {
 	public interface IAuditLogEntry
 	{

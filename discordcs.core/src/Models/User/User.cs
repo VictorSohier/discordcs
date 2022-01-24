@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.user
+namespace Discordcs.Core.Models.User
 {
 	public class User : IUser
 	{

@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.presence;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Presence;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.presence
+namespace Discordcs.Core.Models.Presence
 {
 	public class PresenceUpdate
 	{

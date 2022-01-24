@@ -1,7 +1,7 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.auditLog;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.AuditLog;
 
-namespace Discordcs.core.interfaces
+namespace Discordcs.Core.Interfaces
 {
 	public interface IDiscordWrapper
 	{

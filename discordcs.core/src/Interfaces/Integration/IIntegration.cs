@@ -1,7 +1,7 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.interfaces.integration
+namespace Discordcs.Core.Interfaces.Integration
 {
 	public interface IIntegration
 	{

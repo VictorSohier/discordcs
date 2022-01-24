@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.channel.thread;
+using Discordcs.Core.Interfaces.Channel.Thread;
 
-namespace Discordcs.core.models.channel.thread
+namespace Discordcs.Core.Models.Channel.Thread
 {
 	public class ThreadMetadata : IThreadMetadata
 	{

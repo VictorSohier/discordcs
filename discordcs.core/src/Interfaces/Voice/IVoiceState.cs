@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.guild;
+using Discordcs.Core.Interfaces.Guild;
 
-namespace Discordcs.core.interfaces.voice
+namespace Discordcs.Core.Interfaces.Voice
 {
 	public interface IVoiceState
 	{

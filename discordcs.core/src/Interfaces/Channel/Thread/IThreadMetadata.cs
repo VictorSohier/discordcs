@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.channel.thread
+namespace Discordcs.Core.Interfaces.Channel.Thread
 {
 	public interface IThreadMetadata
 	{

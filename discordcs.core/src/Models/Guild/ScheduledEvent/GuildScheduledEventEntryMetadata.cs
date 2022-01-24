@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.guild.scheduledEvent;
+using Discordcs.Core.Interfaces.Guild.ScheduledEvent;
 
-namespace Discordcs.core.models.guild.scheduledEvent
+namespace Discordcs.Core.Models.Guild.ScheduledEvent
 {
 	public class GuildScheduledEventEntryMetadata : IGuildScheduledEventEntityMetadata
 	{

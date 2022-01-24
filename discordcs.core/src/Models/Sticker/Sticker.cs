@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.sticker;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Sticker;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.sticker
+namespace Discordcs.Core.Models.Sticker
 {
 	public class Sticker : ISticker
 	{

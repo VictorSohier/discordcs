@@ -1,6 +1,6 @@
 using Ardalis.SmartEnum;
 
-namespace Discordcs.core.enums
+namespace Discordcs.Core.Enums
 {
 	public class IntegrationExpireBehaviorEnum : SmartEnum<IntegrationExpireBehaviorEnum, ushort>
 	{

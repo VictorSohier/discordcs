@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.guild;
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.Guild;
+using Discordcs.Core.Interfaces.User;
 
-namespace Discordcs.core.models.guild
+namespace Discordcs.Core.Models.Guild
 {
 	public class GuildMember : IGuildMember
 	{

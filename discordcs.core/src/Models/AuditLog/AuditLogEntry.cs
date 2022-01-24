@@ -1,7 +1,7 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.auditLog;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.AuditLog;
 
-namespace Discordcs.core.models.auditLog
+namespace Discordcs.Core.Models.AuditLog
 {
 	public class AuditLogEntry : IAuditLogEntry
 	{

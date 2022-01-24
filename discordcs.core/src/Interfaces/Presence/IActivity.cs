@@ -1,6 +1,6 @@
-using Discordcs.core.interfaces.emoji;
+using Discordcs.Core.Interfaces.Emoji;
 
-namespace Discordcs.core.interfaces.presence
+namespace Discordcs.Core.Interfaces.Presence
 {
 	public interface IActivity
 	{

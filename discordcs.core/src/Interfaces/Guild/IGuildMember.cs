@@ -1,7 +1,7 @@
-using Discordcs.core.interfaces.user;
+using Discordcs.Core.Interfaces.User;
 using System;
 
-namespace Discordcs.core.interfaces.guild
+namespace Discordcs.Core.Interfaces.Guild
 {
 	public interface IGuildMember
 	{

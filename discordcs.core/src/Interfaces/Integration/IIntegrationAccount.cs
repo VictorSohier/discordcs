@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.integration
+namespace Discordcs.Core.Interfaces.Integration
 {
 	public interface IIntegrationAccount
 	{

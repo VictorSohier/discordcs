@@ -1,14 +1,14 @@
-using Discordcs.core.interfaces.channel;
-using Discordcs.core.interfaces.channel.stage;
-using Discordcs.core.interfaces.emoji;
-using Discordcs.core.interfaces.guild.scheduledEvent;
-using Discordcs.core.interfaces.guild.welcome;
-using Discordcs.core.interfaces.presence;
-using Discordcs.core.interfaces.role;
-using Discordcs.core.interfaces.sticker;
-using Discordcs.core.interfaces.voice;
+using Discordcs.Core.Interfaces.Channel;
+using Discordcs.Core.Interfaces.Channel.Stage;
+using Discordcs.Core.Interfaces.Emoji;
+using Discordcs.Core.Interfaces.Guild.ScheduledEvent;
+using Discordcs.Core.Interfaces.Guild.Welcome;
+using Discordcs.Core.Interfaces.Presence;
+using Discordcs.Core.Interfaces.Role;
+using Discordcs.Core.Interfaces.Sticker;
+using Discordcs.Core.Interfaces.Voice;
 
-namespace Discordcs.core.interfaces.guild
+namespace Discordcs.Core.Interfaces.Guild
 {
 	public interface IGuild
 	{

@@ -1,7 +1,7 @@
-using Discordcs.core.enums;
-using Discordcs.core.interfaces.channel.stage;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces.Channel.Stage;
 
-namespace Discordcs.core.models.channel.stage
+namespace Discordcs.Core.Models.Channel.Stage
 {
 	public class Stage : IStage
 	{

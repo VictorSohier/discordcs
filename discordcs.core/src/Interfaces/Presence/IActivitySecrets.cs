@@ -1,4 +1,4 @@
-namespace Discordcs.core.interfaces.presence
+namespace Discordcs.Core.Interfaces.Presence
 {
 	public interface IActivitySecrets
 	{

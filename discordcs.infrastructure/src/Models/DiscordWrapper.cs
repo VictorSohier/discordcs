@@ -2,13 +2,13 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using Discordcs.core.enums;
-using Discordcs.core.interfaces;
-using Discordcs.core.interfaces.auditLog;
-using Discordcs.core.models.auditLog;
+using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces;
+using Discordcs.Core.Interfaces.AuditLog;
+using Discordcs.Core.Models.AuditLog;
 using Newtonsoft.Json;
 
-namespace Discordcs.infrastructure.models
+namespace Discordcs.Infrastructure.Models
 {
 	public class DiscordWrapper : IDiscordWrapper
 	{
