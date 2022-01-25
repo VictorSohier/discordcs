@@ -1,6 +1,8 @@
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Integration
+namespace Discordcs.Core.Interfaces
 {
 	public interface IIntegrationApplication
 	{
@@ -9,6 +11,6 @@ namespace Discordcs.Core.Interfaces.Integration
 		public string Icon { get; set; }
 		public string Description { get; set; }
 		public string Summary { get; set; }
-		public IUser Bot { get; set; }
+		public User Bot { get; set; }
 	}
 }

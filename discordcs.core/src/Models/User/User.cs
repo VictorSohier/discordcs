@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.User
+namespace Discordcs.Core.Models
 {
 	public class User : IUser
 	{
@@ -16,8 +16,11 @@ namespace Discordcs.Core.Models.User
 		public string Locale { get; set; }
 		public bool Verified { get; set; }
 		public string Email { get; set; }
+		//TODO: Add enum for flag values
 		public int? Flags { get; set; }
+		//TODO: Add enum for flag values
 		public int? PremiumType { get; set; }
+		//TODO: Add enum for flag values
 		public int? PublicFlags { get; set; }
 	}
 }

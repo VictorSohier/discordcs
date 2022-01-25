@@ -1,7 +1,6 @@
-using Discordcs.Core.Interfaces.Guild;
-using Discordcs.Core.Interfaces.Voice;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Voice
+namespace Discordcs.Core.Models
 {
 	public class VoiceState : IVoiceState
 	{
@@ -17,6 +16,6 @@ namespace Discordcs.Core.Models.Voice
 		public bool SelfVideo { get; set; }
 		public bool Suppress { get; set; }
 		public DateTimeOffset? RequestToSpeakTimestamp { get; set; }
-		public IGuildMember Member { get; set; }
+		public GuildMember Member { get; set; }
 	}
 }

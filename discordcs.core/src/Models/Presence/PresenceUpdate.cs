@@ -1,14 +1,13 @@
-using Discordcs.Core.Interfaces.Presence;
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Presence
+namespace Discordcs.Core.Models
 {
 	public class PresenceUpdate
 	{
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public ulong GuildId { get; set; }
 		public string Status { get; set; }
-		public IClientStatus ClientStatus { get; set; }
-		public IActivity[] Activities { get; set; }
+		public ClientStatus ClientStatus { get; set; }
+		public Activity[] Activities { get; set; }
 	}
 }

@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.Role;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Role
+namespace Discordcs.Core.Models
 {
 	public class RoleTag : IRoleTag
 	{

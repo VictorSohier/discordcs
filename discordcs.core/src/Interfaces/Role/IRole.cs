@@ -1,4 +1,7 @@
-namespace Discordcs.Core.Interfaces.Role
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
+
+namespace Discordcs.Core.Interfaces
 {
 	public interface IRole
 	{
@@ -12,6 +15,6 @@ namespace Discordcs.Core.Interfaces.Role
 		public string Permissions { get; set; }
 		public bool Managed { get; set; }
 		public bool Mentionable { get; set; }
-		public IRoleTag Tags { get; set; }
+		public RoleTag Tags { get; set; }
 	}
 }

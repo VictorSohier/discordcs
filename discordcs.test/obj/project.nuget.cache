@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZELfGLjabk03EZ0MSbUJ4xqMcwsBiihn6WnaNR7vlZ/nY44tqg6K8ppkkdlRNJMNxszGklCm7RBYQLXwjGbInA==",
+  "dgSpecHash": "zuGDKsp+brpVUXe2QvJeKh7eiRPLUBICRq5iUoAv9T4ohahsCn743k37XnndGsNuzNMNUh2I0haTrAW8++zwCw==",
   "success": true,
   "projectFilePath": "/home/vsohier/repos/csworkspace/discordcs/discordcs.test/discordcs.test.csproj",
   "expectedPackageFiles": [
     "/home/vsohier/.nuget/packages/ardalis.smartenum/2.0.1/ardalis.smartenum.2.0.1.nupkg.sha512",
+    "/home/vsohier/.nuget/packages/ardalis.smartenum.jsonnet/1.0.31/ardalis.smartenum.jsonnet.1.0.31.nupkg.sha512",
     "/home/vsohier/.nuget/packages/coverlet.collector/3.1.0/coverlet.collector.3.1.0.nupkg.sha512",
     "/home/vsohier/.nuget/packages/microsoft.codecoverage/16.11.0/microsoft.codecoverage.16.11.0.nupkg.sha512",
     "/home/vsohier/.nuget/packages/microsoft.net.test.sdk/16.11.0/microsoft.net.test.sdk.16.11.0.nupkg.sha512",

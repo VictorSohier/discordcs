@@ -1,6 +1,7 @@
-using Discordcs.Core.Interfaces.Emoji;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Presence
+namespace Discordcs.Core.Interfaces
 {
 	public interface IActivity
 	{
@@ -11,13 +12,14 @@ namespace Discordcs.Core.Interfaces.Presence
 		public ulong? ApplicationId { get; set; }
 		public string Details { get; set; }
 		public string State { get; set; }
-		public IEmoji Emoji { get; set; }
+		public Emoji Emoji { get; set; }
 		public bool Instance { get; set; }
+		//TODO: Add enum for flag values
 		public int? Flags { get; set; }
-		public IActivityTimestamp Timestamps { get; set; }
-		public IActivityParty Party { get; set; }
-		public IActivityAsset Assets { get; set; }
-		public IActivitySecrets Secrets { get; set; }
-		public IActivityButton[] Buttons { get; set; }
+		public ActivityTimestamp Timestamps { get; set; }
+		public ActivityParty Party { get; set; }
+		public ActivityAsset Assets { get; set; }
+		public ActivitySecrets Secrets { get; set; }
+		public ActivityButton[] Buttons { get; set; }
 	}
 }

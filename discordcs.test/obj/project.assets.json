@@ -11,6 +11,19 @@
           "lib/netstandard2.0/Ardalis.SmartEnum.dll": {}
         }
       },
+      "Ardalis.SmartEnum.JsonNet/1.0.31": {
+        "type": "package",
+        "dependencies": {
+          "Ardalis.SmartEnum": "2.0.1",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.JsonNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.JsonNet.dll": {}
+        }
+      },
       "coverlet.collector/3.1.0": {
         "type": "package",
         "build": {
@@ -1584,7 +1597,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Ardalis.SmartEnum": "2.0.1"
+          "Ardalis.SmartEnum": "2.0.1",
+          "Ardalis.SmartEnum.JsonNet": "1.0.31",
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
           "bin/placeholder/discordcs.core.dll": {}
@@ -1597,6 +1612,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Ardalis.SmartEnum.JsonNet": "1.0.31",
           "Newtonsoft.Json": "13.0.1",
           "discordcs.core": "1.0.0"
         },
@@ -1622,6 +1638,22 @@
         "icon.png",
         "lib/netstandard2.0/Ardalis.SmartEnum.dll",
         "lib/netstandard2.0/Ardalis.SmartEnum.xml"
+      ]
+    },
+    "Ardalis.SmartEnum.JsonNet/1.0.31": {
+      "sha512": "Bot/PGA4tFHi/4UGoKABSxU1IxHjp4KpPmE/yfLcIpD2pqeYPgmmkgyXMi8b7Wvxt0xLRPDSgCrW8RaJEsVNBg==",
+      "type": "package",
+      "path": "ardalis.smartenum.jsonnet/1.0.31",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.smartenum.jsonnet.1.0.31.nupkg.sha512",
+        "ardalis.smartenum.jsonnet.nuspec",
+        "icon.png",
+        "lib/net48/Ardalis.SmartEnum.JsonNet.dll",
+        "lib/net48/Ardalis.SmartEnum.JsonNet.xml",
+        "lib/netstandard2.0/Ardalis.SmartEnum.JsonNet.dll",
+        "lib/netstandard2.0/Ardalis.SmartEnum.JsonNet.xml"
       ]
     },
     "coverlet.collector/3.1.0": {
@@ -5964,9 +5996,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Ardalis.SmartEnum.JsonNet >= 1.0.31",
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
+      "Newtonsoft.Json >= 13.0.1",
       "coverlet.collector >= 3.1.0",
       "discordcs.core >= 1.0.0",
       "discordcs.infrastructure >= 1.0.0"
@@ -6016,6 +6050,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Ardalis.SmartEnum.JsonNet": {
+            "target": "Package",
+            "version": "[1.0.31, )"
+          },
           "MSTest.TestAdapter": {
             "target": "Package",
             "version": "[2.2.7, )"
@@ -6027,6 +6065,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.11.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           },
           "coverlet.collector": {
             "target": "Package",

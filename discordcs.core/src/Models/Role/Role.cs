@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.Role;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Role
+namespace Discordcs.Core.Models
 {
 	public class Role : IRole
 	{
@@ -14,6 +14,6 @@ namespace Discordcs.Core.Models.Role
 		public string Permissions { get; set; }
 		public bool Managed { get; set; }
 		public bool Mentionable { get; set; }
-		public IRoleTag Tags { get; set; }
+		public RoleTag Tags { get; set; }
 	}
 }

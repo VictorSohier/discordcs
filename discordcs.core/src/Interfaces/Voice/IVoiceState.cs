@@ -1,6 +1,7 @@
-using Discordcs.Core.Interfaces.Guild;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Voice
+namespace Discordcs.Core.Interfaces
 {
 	public interface IVoiceState
 	{
@@ -16,6 +17,6 @@ namespace Discordcs.Core.Interfaces.Voice
 		public bool SelfVideo { get; set; }
 		public bool Suppress { get; set; }
 		public DateTimeOffset? RequestToSpeakTimestamp { get; set; }
-		public IGuildMember Member { get; set; }
+		public GuildMember Member { get; set; }
 	}
 }

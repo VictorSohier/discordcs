@@ -1,7 +1,8 @@
 using Discordcs.Core.Enums;
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Integration
+namespace Discordcs.Core.Interfaces
 {
 	public interface IIntegration
 	{
@@ -13,12 +14,12 @@ namespace Discordcs.Core.Interfaces.Integration
 		public ulong? RoleId { get; set; }
 		public bool? EnableEmoticons { get; set; }
 		public int? ExpireGracePeriod { get; set; }
-		public IUser? User { get; set; }
+		public User? User { get; set; }
 		public DateTimeOffset? SyncedAt { get; set; }
 		public int? SubscriberCount { get; set; }
 		public bool Revoked { get; set; }
 		public IntegrationExpireBehaviorEnum? ExpireBehavior { get; set; }
-		public IIntegrationAccount Account { get; set; }
-		public IIntegrationApplication? Application { get; set; }
+		public IntegrationAccount Account { get; set; }
+		public IntegrationApplication? Application { get; set; }
 	}
 }

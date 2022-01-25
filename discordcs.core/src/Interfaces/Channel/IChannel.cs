@@ -1,8 +1,7 @@
-using Discordcs.Core.Interfaces.Channel.Thread;
-using Discordcs.Core.Interfaces.User;
-using System;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Channel
+namespace Discordcs.Core.Interfaces
 {
 	public interface IChannel
 	{
@@ -27,9 +26,9 @@ namespace Discordcs.Core.Interfaces.Channel
 		public int? MessageCount { get; set; }
 		public int? DefaultAutoArchiveDuration { get; set; }
 		public string Permissions { get; set; }
-		public IUser[] Recipients { get; set; }
-		public IChannelOverwrite[] PermissionOverwrites { get; set; }
-		public IThreadMetadata? ThreadMetadata { get; set; }
-		public IThreadMember? Member { get; set; }
+		public User[] Recipients { get; set; }
+		public ChannelOverwrite[] PermissionOverwrites { get; set; }
+		public ThreadMetadata? ThreadMetadata { get; set; }
+		public ThreadMember? Member { get; set; }
 	}
 }

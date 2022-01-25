@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.Presence;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Presence
+namespace Discordcs.Core.Models
 {
 	public class ActivitySecrets : IActivitySecrets
 	{

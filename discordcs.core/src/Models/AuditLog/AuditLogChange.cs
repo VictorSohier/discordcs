@@ -1,11 +1,11 @@
-using Discordcs.Core.Interfaces.AuditLog;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.AuditLog
+namespace Discordcs.Core.Models
 {
 	public class AuditLogChange : IAuditLogChange
 	{
-		public string NewValue { get; set; }
-		public string OldValue { get; set; }
+		public Dictionary<string, string>[] NewValue { get; set; }
+		public Dictionary<string, string>[] OldValue { get; set; }
 		public string Key { get; set; }
 	}
 }

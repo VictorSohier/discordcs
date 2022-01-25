@@ -1,18 +1,15 @@
-using Discordcs.Core.Interfaces.Channel;
-using Discordcs.Core.Interfaces.Guild.ScheduledEvent;
-using Discordcs.Core.Interfaces.Integration;
-using Discordcs.Core.Interfaces.User;
-using Discordcs.Core.Interfaces.Webhook;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.AuditLog
+namespace Discordcs.Core.Interfaces
 {
 	public interface IAuditLog
 	{
-		public IAuditLogEntry[] AuditLogEntries { get; set; }
-		public IGuildScheduledEvent[] GuildScheduledEvents { get; set; }
-		public IUser[] Users { get; set; }
-		public IIntegration[] Integrations { get; set; }
-		public IChannel[] Threads { get; set; }
-		public IWebhook[] Webhooks { get; set; }
+		public AuditLogEntry[] AuditLogEntries { get; set; }
+		public GuildScheduledEvent[] GuildScheduledEvents { get; set; }
+		public User[] Users { get; set; }
+		public Integration[] Integrations { get; set; }
+		public Channel[] Threads { get; set; }
+		public Webhook[] Webhooks { get; set; }
 	}
 }

@@ -1,7 +1,10 @@
 using Ardalis.SmartEnum;
+using Ardalis.SmartEnum.JsonNet;
+using Newtonsoft.Json;
 
 namespace Discordcs.Core.Enums
 {
+	[JsonConverter(typeof(SmartEnumValueConverter<AuditLogEventEnum, ushort>))]
 	public class AuditLogEventEnum : SmartEnum<AuditLogEventEnum, ushort>
 	{
 		public static readonly AuditLogEventEnum GUILD_UPDATE = new("Guild update", 1);

@@ -1,4 +1,7 @@
-namespace Discordcs.Core.Interfaces.Role
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
+
+namespace Discordcs.Core.Interfaces
 {
 	public interface IRoleTag
 	{

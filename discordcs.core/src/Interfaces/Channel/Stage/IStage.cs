@@ -1,6 +1,8 @@
 using Discordcs.Core.Enums;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Channel.Stage
+namespace Discordcs.Core.Interfaces
 {
 	public interface IStage
 	{

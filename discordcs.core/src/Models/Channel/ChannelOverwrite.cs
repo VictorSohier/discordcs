@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.Channel;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Channel
+namespace Discordcs.Core.Models
 {
 	public class ChannelOverwrite : IChannelOverwrite
 	{

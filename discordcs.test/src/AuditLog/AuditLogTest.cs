@@ -1,9 +1,12 @@
+using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
-using Discordcs.Core.Interfaces.AuditLog;
-using Discordcs.Core.Models.AuditLog;
+using Discordcs.Core.Models;
 using Discordcs.Infrastructure.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
+using System.Diagnostics;
 
 namespace Discordcs.test.auditLog
 {
@@ -22,7 +25,6 @@ namespace Discordcs.test.auditLog
 		public void GetAuditLog()
 		{
 			IAuditLog auditLog = _discord.GetGuildAuditLog(549020785436655647).Result;
-
 			Assert.IsInstanceOfType(auditLog, typeof(AuditLog));
 		}
 	}

@@ -1,10 +1,10 @@
-using Discordcs.Core.Interfaces.Guild.Welcome;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Guild.Welcome
+namespace Discordcs.Core.Models
 {
 	public class GuildWelcomeScreen : IGuildWelcomeScreen
 	{
 		public string Description { get; set; }
-		public IGuildWelcomeChannel[] WelcomeChannels { get; set; }
+		public GuildWelcomeChannel[] WelcomeChannels { get; set; }
 	}
 }

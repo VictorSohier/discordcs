@@ -1,13 +1,14 @@
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Emoji
+namespace Discordcs.Core.Interfaces
 {
 	public interface IEmoji
 	{
 		public ulong? Id { get; set; }
 		public string Name { get; set; }
 		public ulong[] Roles { get; set; }
-		public IUser user { get; set; }
+		public User user { get; set; }
 		public bool RequireColons { get; set; }
 		public bool Managed { get; set; }
 		public bool Animated { get; set; }

@@ -1,14 +1,7 @@
-using Discordcs.Core.Interfaces.Channel;
-using Discordcs.Core.Interfaces.Channel.Stage;
-using Discordcs.Core.Interfaces.Emoji;
-using Discordcs.Core.Interfaces.Guild.ScheduledEvent;
-using Discordcs.Core.Interfaces.Guild.Welcome;
-using Discordcs.Core.Interfaces.Presence;
-using Discordcs.Core.Interfaces.Role;
-using Discordcs.Core.Interfaces.Sticker;
-using Discordcs.Core.Interfaces.Voice;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Guild
+namespace Discordcs.Core.Interfaces
 {
 	public interface IGuild
 	{
@@ -32,14 +25,15 @@ namespace Discordcs.Core.Interfaces.Guild
 		public int MFALevel { get; set; }
 		public ulong? ApplicationId { get; set; }
 		public ulong? SystemChannelId { get; set; }
+		//TODO: Add enum for flag values
 		public int SystemChannelFlags { get; set; }
 		public ulong? RulesChannelId { get; set; }
 		public DateTimeOffset? JoinedAt { get; set; }
 		public bool Large { get; set; }
 		public bool Unavailable { get; set; }
 		public int? MemberCount { get; set; }
-		public IChannel[] Channels { get; set; }
-		public IChannel[] Threads { get; set; }
+		public Channel[] Channels { get; set; }
+		public Channel[] Threads { get; set; }
 		public int? MaxPrecences { get; set; }
 		public int? MaxMembers { get; set; }
 		public string VanityUrlCode { get; set; }
@@ -53,15 +47,15 @@ namespace Discordcs.Core.Interfaces.Guild
 		public int? ApproximateMemberCount { get; set; }
 		public int? ApproximatePresenceCount { get; set; }
 		public int NSFWLevel { get; set; }
-		public IGuildScheduledEvent[] GuildScheduledEvents { get; set; }
+		public GuildScheduledEvent[] GuildScheduledEvents { get; set; }
 		public bool PremiumProgressBarEnabled { get; set; }
-		public IRole[] Roles { get; set; }
-		public IEmoji[] Emojis { get; set; }
-		public IVoiceState[] VoiceStates { get; set; }
-		public IGuildMember[] Members { get; set; }
-		public IPresenceUpdate[] Presences { get; set; }
-		public IGuildWelcomeScreen WelcomeScreen { get; set; }
-		public IStage[] StageInstances { get; set; }
-		public ISticker[] Stickers { get; set; }
+		public Role[] Roles { get; set; }
+		public Emoji[] Emojis { get; set; }
+		public VoiceState[] VoiceStates { get; set; }
+		public GuildMember[] Members { get; set; }
+		public PresenceUpdate[] Presences { get; set; }
+		public GuildWelcomeScreen WelcomeScreen { get; set; }
+		public Stage[] StageInstances { get; set; }
+		public Sticker[] Stickers { get; set; }
 	}
 }

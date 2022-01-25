@@ -1,7 +1,6 @@
-using Discordcs.Core.Interfaces.Sticker;
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Sticker
+namespace Discordcs.Core.Models
 {
 	public class Sticker : ISticker
 	{
@@ -15,7 +14,7 @@ namespace Discordcs.Core.Models.Sticker
 		public int FormatAType { get; set; }
 		public bool Available { get; set; }
 		public ulong GuildId { get; set; }
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public int? SortValue { get; set; }
 		public int CompareTo(ISticker other)
 		{

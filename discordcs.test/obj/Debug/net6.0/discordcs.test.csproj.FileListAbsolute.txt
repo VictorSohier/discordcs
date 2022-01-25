@@ -101,3 +101,4 @@
 /home/vsohier/repos/csworkspace/discordcs/discordcs.test/obj/Debug/net6.0/ref/discordcs.test.dll
 /home/vsohier/repos/csworkspace/discordcs/discordcs.test/obj/Debug/net6.0/discordcs.test.pdb
 /home/vsohier/repos/csworkspace/discordcs/discordcs.test/obj/Debug/net6.0/discordcs.test.genruntimeconfig.cache
+/home/vsohier/repos/csworkspace/discordcs/discordcs.test/bin/Debug/net6.0/Ardalis.SmartEnum.JsonNet.dll

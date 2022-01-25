@@ -1,11 +1,13 @@
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 using System;
 
-namespace Discordcs.Core.Interfaces.Guild
+namespace Discordcs.Core.Interfaces
 {
 	public interface IGuildMember
 	{
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public string Nick { get; set; }
 		public string Avatar { get; set; }
 		public ulong[] Roles { get; set; }

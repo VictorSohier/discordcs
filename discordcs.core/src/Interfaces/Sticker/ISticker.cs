@@ -1,6 +1,7 @@
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
-namespace Discordcs.Core.Interfaces.Sticker
+namespace Discordcs.Core.Interfaces
 {
 	public interface ISticker : IComparable<ISticker>
 	{
@@ -14,7 +15,7 @@ namespace Discordcs.Core.Interfaces.Sticker
 		public int FormatAType { get; set; }
 		public bool Available { get; set; }
 		public ulong GuildId { get; set; }
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public int? SortValue { get; set; }
 	}
 }

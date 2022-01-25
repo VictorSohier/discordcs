@@ -1,6 +1,6 @@
-using Discordcs.Core.Interfaces.Guild.Welcome;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Guild.Welcome
+namespace Discordcs.Core.Models
 {
 	public class GuildWelcomeChannel : IGuildWelcomeChannel
 	{

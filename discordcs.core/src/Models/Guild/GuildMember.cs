@@ -1,11 +1,10 @@
-using Discordcs.Core.Interfaces.Guild;
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Guild
+namespace Discordcs.Core.Models
 {
 	public class GuildMember : IGuildMember
 	{
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public string Nick { get; set; }
 		public string Avatar { get; set; }
 		public ulong[] Roles { get; set; }

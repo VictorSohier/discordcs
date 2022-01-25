@@ -1,4 +1,7 @@
-namespace Discordcs.Core.Interfaces.AuditLog
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
+
+namespace Discordcs.Core.Interfaces
 {
 	public interface IAuditLogOptionalInfo
 	{

@@ -1,9 +1,6 @@
-using Discordcs.Core.Interfaces.Channel;
-using Discordcs.Core.Interfaces.Guild;
-using Discordcs.Core.Interfaces.User;
-using Discordcs.Core.Interfaces.Webhook;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Webhook
+namespace Discordcs.Core.Models
 {
 	public class Webhook : IWebhook
 	{
@@ -11,12 +8,12 @@ namespace Discordcs.Core.Models.Webhook
 		public int Type { get; set; }
 		public ulong? GuildId { get; set; }
 		public ulong ChannelId { get; set; }
-		public IUser User { get; set; }
+		public User User { get; set; }
 		public string Name { get; set; }
 		public string Avatar { get; set; }
 		public ulong? ApplicationId { get; set; }
-		public IChannel SourceChannel { get; set; }
+		public Channel SourceChannel { get; set; }
 		public string Url { get; set; }
-		public IGuild SourceGuild { get; set; }
+		public Guild SourceGuild { get; set; }
 	}
 }

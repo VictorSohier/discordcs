@@ -1,4 +1,7 @@
-namespace Discordcs.Core.Interfaces.User
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
+
+namespace Discordcs.Core.Interfaces
 {
 	public interface IUser
 	{
@@ -14,8 +17,11 @@ namespace Discordcs.Core.Interfaces.User
 		public string Locale { get; set; }
 		public bool Verified { get; set; }
 		public string Email { get; set; }
+		//TODO: Add enum for flag values
 		public int? Flags { get; set; }
+		//TODO: Add enum for flag values
 		public int? PremiumType { get; set; }
+		//TODO: Add enum for flag values
 		public int? PublicFlags { get; set; }
 	}
 }

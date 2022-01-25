@@ -1,9 +1,12 @@
-namespace Discordcs.Core.Interfaces.AuditLog
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
+
+namespace Discordcs.Core.Interfaces
 {
 	public interface IAuditLogChange
 	{
-		public string NewValue { get; set; }
-		public string OldValue { get; set; }
+		public Dictionary<string, string>[] NewValue { get; set; }
+		public Dictionary<string, string>[] OldValue { get; set; }
 		public string Key { get; set; }
 	}
 }

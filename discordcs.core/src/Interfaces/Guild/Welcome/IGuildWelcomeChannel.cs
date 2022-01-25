@@ -1,4 +1,4 @@
-namespace Discordcs.Core.Interfaces.Guild.Welcome
+namespace Discordcs.Core.Interfaces
 {
 	public interface IGuildWelcomeChannel
 	{

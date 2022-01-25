@@ -1,7 +1,10 @@
 using Ardalis.SmartEnum;
+using Ardalis.SmartEnum.JsonNet;
+using Newtonsoft.Json;
 
 namespace Discordcs.Core.Enums
 {
+	[JsonConverter(typeof(SmartEnumValueConverter<IntegrationExpireBehaviorEnum, ushort>))]
 	public class IntegrationExpireBehaviorEnum : SmartEnum<IntegrationExpireBehaviorEnum, ushort>
 	{
 		public static readonly IntegrationExpireBehaviorEnum REMOVE_ROLE = new("Remove role", 0);

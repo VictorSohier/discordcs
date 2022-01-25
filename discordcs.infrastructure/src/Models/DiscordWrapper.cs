@@ -1,12 +1,9 @@
 using System.Diagnostics;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
-using Discordcs.Core.Interfaces.AuditLog;
-using Discordcs.Core.Models.AuditLog;
+using Discordcs.Core.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Discordcs.Infrastructure.Models
 {
@@ -14,6 +11,14 @@ namespace Discordcs.Infrastructure.Models
 	{
 		private string _baseUrl { get; } = "https://discord.com/api";
 		private HttpClient _httpClient { get; } = new();
+		private JsonSerializerSettings _settings { get; } = new()
+		{
+			ContractResolver = new DefaultContractResolver()
+			{
+				NamingStrategy = new SnakeCaseNamingStrategy()
+			},
+			NullValueHandling = NullValueHandling.Ignore
+		};
 		public byte ApiVersion { get; } = 9;
 		public byte[] PublicKey { get; }
 
@@ -43,7 +48,9 @@ namespace Discordcs.Infrastructure.Models
 				? $"?limit={limit}"
 				: $"{queryString}&limit={limit}";
 			HttpResponseMessage response = await _httpClient.GetAsync($"guilds/{guildId}/audit-logs");
-			AuditLog ret = JsonConvert.DeserializeObject<AuditLog>(await response.Content.ReadAsStringAsync());
+			AuditLog ret = JsonConvert.DeserializeObject<AuditLog>(
+				await response.Content.ReadAsStringAsync(),
+				_settings);
 			return ret;
 		}
 	}

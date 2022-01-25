@@ -1,8 +1,7 @@
 using Discordcs.Core.Enums;
-using Discordcs.Core.Interfaces.Guild.ScheduledEvent;
-using Discordcs.Core.Interfaces.User;
+using Discordcs.Core.Interfaces;
 
-namespace Discordcs.Core.Models.Guild.ScheduledEvent
+namespace Discordcs.Core.Models
 {
 	public class GuildScheduledEvent : IGuildScheduledEvent
 	{
@@ -19,7 +18,7 @@ namespace Discordcs.Core.Models.Guild.ScheduledEvent
 		public PrivacyLevelEnum PrivacyLevel { get; set; }
 		public GuildScheduledEventStatusEnum Status { get; set; }
 		public GuildScheduledEventEntityTypeEnum EntityType { get; set; }
-		public IGuildScheduledEventEntityMetadata? EntityMetadata { get; set; }
-		public IUser Creator { get; set; }
+		public GuildScheduledEventEntityMetadata? EntityMetadata { get; set; }
+		public User Creator { get; set; }
 	}
 }
