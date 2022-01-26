@@ -1,24 +1,29 @@
-using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
 using Discordcs.Core.Models;
 using Discordcs.Infrastructure.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 using System;
-using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Discordcs.test.auditLog
 {
 	[TestClass]
 	public class AuditLogTest
 	{
-		string PublicKey = "m9D5tA7pn1MbCFaAsTnDsTQ3wx7fgiIO7rDy/kWq72A=";
 		private IDiscordWrapper _discord { get; set; }
+		private IConfiguration _config { get; }
 
 		public AuditLogTest()
 		{
-			_discord = new DiscordWrapper("OTMzODg1NzI5MjIwNzM1MDQ2.YeoC3A.Qi2Wo_c7g2r1S3omDhE1yeaB74Q", Convert.FromBase64String(PublicKey));
+			_config = new ConfigurationBuilder()
+				.SetBasePath($"{Directory.GetCurrentDirectory()}/../../../")
+				.AddJsonFile("appsettings.json")
+				.AddUserSecrets("9462ec6c-6f3b-4e8b-bdd5-d9288223733b")
+				.Build();
+			_discord = new DiscordWrapper(
+				_config["Token"], Convert.FromBase64String(_config["PublicKey"]));
 		}
 
 		[TestMethod]

@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 
 namespace Discordcs.Core.Enums
 {
-	[JsonConverter(typeof(SmartEnumValueConverter<GuildScheduledEventStatusEnum, ushort>))]
 	public class GuildScheduledEventStatusEnum : SmartEnum<GuildScheduledEventStatusEnum, ushort>
 	{
 		public static readonly GuildScheduledEventStatusEnum SCHEDULED = new("Scheduled", 1);

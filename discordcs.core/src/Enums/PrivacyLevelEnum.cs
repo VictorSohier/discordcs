@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 
 namespace Discordcs.Core.Enums
 {
-	[JsonConverter(typeof(SmartEnumValueConverter<PrivacyLevelEnum, ushort>))]
 	public class PrivacyLevelEnum : SmartEnum<PrivacyLevelEnum, ushort>
 	{
 		public static readonly PrivacyLevelEnum PUBLIC = new("Public", 1);
