@@ -14,6 +14,7 @@ namespace Discordcs.test.auditLog
 	{
 		private IDiscordWrapper _discord { get; set; }
 		private IConfiguration _config { get; }
+		private ulong _guildId { get; }
 
 		public AuditLogTest()
 		{
@@ -22,6 +23,7 @@ namespace Discordcs.test.auditLog
 				.AddJsonFile("appsettings.json")
 				.AddUserSecrets("9462ec6c-6f3b-4e8b-bdd5-d9288223733b")
 				.Build();
+			_guildId = ulong.Parse(_config["GuildId"]);
 			_discord = new DiscordWrapper(
 				_config["Token"], Convert.FromBase64String(_config["PublicKey"]));
 		}
@@ -29,7 +31,7 @@ namespace Discordcs.test.auditLog
 		[TestMethod]
 		public void GetAuditLog()
 		{
-			IAuditLog auditLog = _discord.GetGuildAuditLog(549020785436655647).Result;
+			IAuditLog auditLog = _discord.GetGuildAuditLog(_guildId).Result;
 			Assert.IsInstanceOfType(auditLog, typeof(AuditLog));
 		}
 	}

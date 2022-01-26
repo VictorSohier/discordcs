@@ -1,5 +1,6 @@
+using System.Text.Json.Serialization;
+using Discordcs.Core.Enums;
 using Discordcs.Core.Models;
-using Newtonsoft.Json;
 
 namespace Discordcs.Core.Interfaces
 {
@@ -25,8 +26,9 @@ namespace Discordcs.Core.Interfaces
 		public int MFALevel { get; set; }
 		public ulong? ApplicationId { get; set; }
 		public ulong? SystemChannelId { get; set; }
-		//TODO: Add enum for flag values
-		public int SystemChannelFlags { get; set; }
+		public uint SystemChannelFlags { get; set; }
+		[JsonIgnore]
+		public SystemChannelFlagsEnum[] SystemChannelFlagsEnums { get; set; }
 		public ulong? RulesChannelId { get; set; }
 		public DateTimeOffset? JoinedAt { get; set; }
 		public bool Large { get; set; }

@@ -1,3 +1,4 @@
+using Discordcs.Core.Enums;
 using Discordcs.Core.Models;
 using Newtonsoft.Json;
 
@@ -14,8 +15,9 @@ namespace Discordcs.Core.Interfaces
 		public string State { get; set; }
 		public Emoji Emoji { get; set; }
 		public bool Instance { get; set; }
-		//TODO: Add enum for flag values
-		public int? Flags { get; set; }
+		public uint Flags { get; set; }
+		[JsonIgnore]
+		public ActivityFlagsEnum[] ActivityFlags { get; set; }
 		public ActivityTimestamp Timestamps { get; set; }
 		public ActivityParty Party { get; set; }
 		public ActivityAsset Assets { get; set; }

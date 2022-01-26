@@ -1,10 +1,12 @@
-
+using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
+using Newtonsoft.Json;
 
 namespace Discordcs.Core.Models
 {
 	public class Guild : IGuild
 	{
+		private uint _systemChannelFlags { get; set; }
 		public ulong Id { get; set; }
 		public string Name { get; set; }
 		public string Icon { get; set; }
@@ -25,8 +27,15 @@ namespace Discordcs.Core.Models
 		public int MFALevel { get; set; }
 		public ulong? ApplicationId { get; set; }
 		public ulong? SystemChannelId { get; set; }
-		//TODO: Add enum for flag values
-		public int SystemChannelFlags { get; set; }
+		public uint SystemChannelFlags {
+			get => _systemChannelFlags;
+			set => _systemChannelFlags = value;
+		}
+		[JsonIgnore]
+		public SystemChannelFlagsEnum[] SystemChannelFlagsEnums {
+			get => SystemChannelFlagsEnum.FlagsToArray(_systemChannelFlags);
+			set => _systemChannelFlags = SystemChannelFlagsEnum.ArrayToFlags(value);
+		}
 		public ulong? RulesChannelId { get; set; }
 		public DateTimeOffset? JoinedAt { get; set; }
 		public bool Large { get; set; }

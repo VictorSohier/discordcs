@@ -1,4 +1,4 @@
-using Discordcs.Core.Models;
+using Discordcs.Core.Enums;
 using Newtonsoft.Json;
 
 namespace Discordcs.Core.Interfaces
@@ -17,11 +17,14 @@ namespace Discordcs.Core.Interfaces
 		public string Locale { get; set; }
 		public bool Verified { get; set; }
 		public string Email { get; set; }
-		//TODO: Add enum for flag values
-		public int? Flags { get; set; }
-		//TODO: Add enum for flag values
-		public int? PremiumType { get; set; }
-		//TODO: Add enum for flag values
-		public int? PublicFlags { get; set; }
+		public uint Flags { get; set; }
+		[JsonIgnore]
+		public UserFlagsEnum[] UserFlags { get; set; }
+		public uint PremiumType { get; set; }
+		[JsonIgnore]
+		public PremiumTypesEnum PremiumTypeEnum { get; set; }
+		public uint PublicFlags { get; set; }
+		[JsonIgnore]
+		public UserFlagsEnum[] PublicUserFlags { get; set; }
 	}
 }

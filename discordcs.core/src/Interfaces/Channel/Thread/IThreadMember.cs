@@ -1,4 +1,5 @@
-using Discordcs.Core.Models;
+using Ardalis.SmartEnum.JsonNet;
+using Discordcs.Core.Enums;
 using Newtonsoft.Json;
 
 namespace Discordcs.Core.Interfaces
@@ -8,7 +9,8 @@ namespace Discordcs.Core.Interfaces
 		public ulong? Id { get; set; }
 		public ulong? UserId { get; set; }
 		public DateTimeOffset JoinTimestamp { get; set; }
-		//TODO: Add enum for flag values
-		public int Flags { get; set; }
+		public uint Flags { get; set; }
+		[JsonIgnore]
+		public MessageFlagsEnum[] MessageFlags { get; set; }
 	}
 }
