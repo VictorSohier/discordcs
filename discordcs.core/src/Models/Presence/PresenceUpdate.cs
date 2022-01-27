@@ -1,5 +1,3 @@
-using Discordcs.Core.Interfaces;
-
 namespace Discordcs.Core.Models
 {
 	public class PresenceUpdate

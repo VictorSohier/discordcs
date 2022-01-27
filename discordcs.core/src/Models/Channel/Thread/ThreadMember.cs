@@ -1,4 +1,3 @@
-using Ardalis.SmartEnum.JsonNet;
 using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
 using Newtonsoft.Json;
@@ -13,7 +12,7 @@ namespace Discordcs.Core.Models
 		public DateTimeOffset JoinTimestamp { get; set; }
 		public uint Flags { get => _messageFlags; set => _messageFlags = value; }
 		[JsonIgnore]
-		public MessageFlagsEnum[] MessageFlags {
+		public MessageFlagsEnum[] MessageFlagsEnums {
 			get => MessageFlagsEnum.FlagsToArray(_messageFlags);
 			set => _messageFlags = MessageFlagsEnum.ArrayToFlags(value);
 		}

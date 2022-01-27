@@ -1,6 +1,4 @@
-using Discordcs.Core.Interfaces;
 using Discordcs.Core.Models;
-using Newtonsoft.Json;
 
 namespace Discordcs.Core.Interfaces
 {

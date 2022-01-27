@@ -1,6 +1,4 @@
 using Ardalis.SmartEnum;
-using Ardalis.SmartEnum.JsonNet;
-using Newtonsoft.Json;
 
 namespace Discordcs.Core.Enums
 {

@@ -1,5 +1,4 @@
 using Discordcs.Core.Enums;
-using Discordcs.Core.Interfaces;
 
 namespace Discordcs.Core.Interfaces
 {

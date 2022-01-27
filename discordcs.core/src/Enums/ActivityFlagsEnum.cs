@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Ardalis.SmartEnum;
 
 namespace Discordcs.Core.Enums
