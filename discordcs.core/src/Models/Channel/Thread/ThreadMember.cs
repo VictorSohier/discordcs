@@ -10,11 +10,7 @@ namespace Discordcs.Core.Models
 		public ulong? Id { get; set; }
 		public ulong? UserId { get; set; }
 		public DateTimeOffset JoinTimestamp { get; set; }
-		public uint Flags { get => _messageFlags; set => _messageFlags = value; }
-		[JsonIgnore]
-		public MessageFlagsEnum[] MessageFlagsEnums {
-			get => MessageFlagsEnum.FlagsToArray(_messageFlags);
-			set => _messageFlags = MessageFlagsEnum.ArrayToFlags(value);
-		}
+		[JsonConverter(typeof(SmartEnumArrayValueConverter<MessageFlagsEnum>))]
+		public MessageFlagsEnum[] Flags { get; set; }
 	}
 }

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using Newtonsoft.Json;
 
 namespace Discordcs.test.auditLog
 {
@@ -15,6 +16,7 @@ namespace Discordcs.test.auditLog
 		private IDiscordWrapper _discord { get; set; }
 		private IConfiguration _config { get; }
 		private ulong _guildId { get; }
+		private JsonSerializerSettings settings = new JsonSerializerSettings();
 
 		public AuditLogTest()
 		{
@@ -26,12 +28,14 @@ namespace Discordcs.test.auditLog
 			_guildId = ulong.Parse(_config["GuildId"]);
 			_discord = new DiscordWrapper(
 				_config["Token"], Convert.FromBase64String(_config["PublicKey"]));
+			settings.Formatting = Formatting.Indented;
 		}
 
 		[TestMethod]
 		public void GetAuditLog()
 		{
 			IAuditLog auditLog = _discord.GetGuildAuditLog(_guildId).Result;
+			Console.WriteLine(JsonConvert.SerializeObject(auditLog, settings));
 			Assert.IsInstanceOfType(auditLog, typeof(AuditLog));
 		}
 	}

@@ -1,11 +1,16 @@
+using Ardalis.SmartEnum.JsonNet;
+using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
+using Discordcs.Core.Models;
+using Newtonsoft.Json;
 
 namespace Discordcs.Core.Models
 {
 	public class Channel : IChannel
 	{
 		public ulong Id { get; set; }
-		public int Type { get; set; }
+		[JsonConverter(typeof(SmartEnumValueConverter<ChannelTypeEnum, ushort>))]
+		public ChannelTypeEnum Type { get; set; }
 		public ulong GuildId { get; set; }
 		public int Position { get; set; }
 		public string Name { get; set; }
@@ -21,9 +26,10 @@ namespace Discordcs.Core.Models
 		public ulong? ParentId { get; set; }
 		public DateTimeOffset? LastPinTimestamp { get; set; }
 		public string RTCRegion { get; set; }
-		public int? VideoQualityMode { get; set; }
-		public int? MessageCount { get; set; }
-		public int? DefaultAutoArchiveDuration { get; set; }
+		[JsonConverter(typeof(SmartEnumValueConverter<VideoQualityEnum, ushort>))]
+		public VideoQualityEnum VideoQualityMode { get; set; }
+		public uint? MessageCount { get; set; }
+		public uint? DefaultAutoArchiveDuration { get; set; }
 		public string Permissions { get; set; }
 		public User[] Recipients { get; set; }
 		public ChannelOverwrite[] PermissionOverwrites { get; set; }

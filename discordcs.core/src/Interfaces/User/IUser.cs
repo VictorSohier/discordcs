@@ -1,4 +1,6 @@
+using Ardalis.SmartEnum.JsonNet;
 using Discordcs.Core.Enums;
+using Discordcs.Core.Models;
 using Newtonsoft.Json;
 
 namespace Discordcs.Core.Interfaces
@@ -17,14 +19,11 @@ namespace Discordcs.Core.Interfaces
 		public string Locale { get; set; }
 		public bool Verified { get; set; }
 		public string Email { get; set; }
-		public uint Flags { get; set; }
-		[JsonIgnore]
-		public UserFlagsEnum[] UserFlags { get; set; }
-		public uint PremiumType { get; set; }
-		[JsonIgnore]
-		public PremiumTypesEnum PremiumTypeEnum { get; set; }
-		public uint PublicFlags { get; set; }
-		[JsonIgnore]
-		public UserFlagsEnum[] PublicUserFlags { get; set; }
+		[JsonConverter(typeof(SmartEnumArrayValueConverter<SystemChannelFlagsEnum>))]
+		public UserFlagsEnum[] Flags { get; set; }
+		[JsonConverter(typeof(SmartEnumValueConverter<PremiumTypesEnum, uint>))]
+		public PremiumTypesEnum PremiumType { get; set; }
+		[JsonConverter(typeof(SmartEnumArrayValueConverter<UserFlagsEnum>))]
+		public UserFlagsEnum[] PublicFlags { get; set; }
 	}
 }

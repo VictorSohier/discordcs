@@ -15,9 +15,8 @@ namespace Discordcs.Core.Interfaces
 		public string State { get; set; }
 		public Emoji Emoji { get; set; }
 		public bool Instance { get; set; }
-		public uint Flags { get; set; }
-		[JsonIgnore]
-		public ActivityFlagsEnum[] ActivityFlags { get; set; }
+		[JsonConverter(typeof(SmartEnumArrayValueConverter<SystemChannelFlagsEnum>))]
+		public ActivityFlagsEnum[] Flags { get; set; }
 		public ActivityTimestamp Timestamps { get; set; }
 		public ActivityParty Party { get; set; }
 		public ActivityAsset Assets { get; set; }

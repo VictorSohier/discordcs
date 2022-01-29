@@ -2,7 +2,7 @@ using Ardalis.SmartEnum;
 
 namespace Discordcs.Core.Enums
 {
-    public class UserFlagsEnum : SmartEnum<UserFlagsEnum, uint>
+    public class UserFlagsEnum : BitFlagSmartEnum<UserFlagsEnum>
     {
 		public static readonly UserFlagsEnum STAFF = new("Staff", 1 << 0);
 		public static readonly UserFlagsEnum PARTNER = new("Partner", 1 << 1);
@@ -18,34 +18,9 @@ namespace Discordcs.Core.Enums
 		public static readonly UserFlagsEnum VERIFIED_DEVELOPER = new("Verified developer", 1 << 17);
 		public static readonly UserFlagsEnum CERTIFIED_MODERATOR = new("Certified moderator", 1 << 18);
 		public static readonly UserFlagsEnum BOT_HTTP_INTERACTIONS = new("Bot http interactions", 1 << 19);
-        private UserFlagsEnum(string name, uint value) : base(name, value)
+        private UserFlagsEnum(string name, ulong value) : base(name, value)
 		{
 
-		}
-
-		public static UserFlagsEnum[] FlagsToArray(uint value)
-		{
-			List<UserFlagsEnum> ret = new();
-			uint mask = 1;
-			while (mask != 0)
-			{
-				if ((value & mask) > 0)
-				{
-					ret.Add(FromValue(mask));
-				}
-				mask <<= 1;
-			}
-			return ret.ToArray();
-		}
-
-		public static uint ArrayToFlags(IEnumerable<UserFlagsEnum> values)
-		{
-			uint ret = 0;
-			foreach (UserFlagsEnum v in values)
-			{
-				ret |= v.Value;
-			}
-			return ret;
 		}
     }
 }
