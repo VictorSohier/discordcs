@@ -1,6 +1,8 @@
 using System.Net;
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Runtime.Intrinsics.Arm;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography;
 using System.Text;
 using Discordcs.Core.Enums;
 using Discordcs.Core.Interfaces;
@@ -226,6 +228,38 @@ namespace Discordcs.Infrastructure.Models
 				_settings
 			);
 			return ret;
+		}
+
+		public async Task<Message> CreateMessage(ulong channelId, NewMessage message)
+		{
+			MemoryStream ms = new();
+			BinaryWriter bw = new(ms);
+			bw.Write(JsonConvert.SerializeObject(message, _settings));
+			bw.Close();
+			HashAlgorithm sha512 = SHA512.Create();
+			string boundary = BitConverter
+				.ToString(await sha512.ComputeHashAsync(ms))
+				.Replace("-", "");
+			string s = $"--{boundary}\n"
+				+ "Content-Disposition: form-data; name=\"payload_json\"\n"
+				+ "Content-Type: application/json\n"
+				+ $"{message.PayloadJson}\n";
+			
+			for (int i = 0; i < message.Attachments.Length; i++)
+			{
+				s += $"--{boundary}\n"
+				+ $"Content-Disposition: form-data; name=\"files[{i}]\"\n"
+				+ $"Content-Type: {message.Attachments[i].ContentType}\n"
+				+ "\n"
+				+ Convert.ToBase64String(message.Files[i]);
+			}
+			s += $"--{boundary}--";
+			
+			StringContent content = new(s, Encoding.UTF8, "multipart/form-data");
+			string id = AddCommand(() => _httpClient.PostAsync($"channels/{channelId}/messages",
+				content));
+			HttpResponseMessage response = GetCommandResponse(id);
+			return JsonConvert.DeserializeObject<Message>(await response.Content.ReadAsStringAsync());
 		}
 
 		~DiscordWrapper()

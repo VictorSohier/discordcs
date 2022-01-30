@@ -10,5 +10,6 @@ namespace Discordcs.Core.Interfaces
 		public Task<Channel> ModifyChannel(ulong channelId, IChannelParams parameters);
 		public void DeleteChannel(ulong channelId);
 		public Task<Message[]> GetChannelMessages(ulong channelId, ulong? around=null, ulong? before=null, ulong? after=null, byte? limit=null);
+		public Task<Message> CreateMessage(ulong channelId, NewMessage message);
 	}
 }
