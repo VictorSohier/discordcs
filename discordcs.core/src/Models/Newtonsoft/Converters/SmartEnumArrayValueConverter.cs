@@ -16,7 +16,15 @@ namespace Discordcs.Core.Models
 		{
 			try
 			{
-				TEnum[] ret = BitFlagSmartEnum<TEnum>.FlagsToArray((ulong) (Convert.ChangeType(reader.Value, typeof(ulong)) ?? 0));
+				TEnum[] ret;
+				if (reader.Value == null)
+				{
+					ret = null;
+				}
+				else
+				{
+					ret = BitFlagSmartEnum<TEnum>.FlagsToArray((ulong) (Convert.ChangeType(reader.Value, typeof(ulong)) ?? 0));
+				}
 				return ret;
 			}
 			catch (Exception e)

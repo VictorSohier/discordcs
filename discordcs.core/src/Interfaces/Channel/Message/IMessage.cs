@@ -14,11 +14,11 @@ namespace Discordcs.Core.Interfaces
 		public GuildMember Member { get; set; }
 		public string Content { get; set; }
 		public DateTimeOffset Timestamp { get; set; }
-		public DateTimeOffset EditedTimestamp { get; set; }
+		public DateTimeOffset? EditedTimestamp { get; set; }
 		public bool TTS { get; set; }
 		public bool MentionEveryone { get; set; }
 		public User[] Mentions { get; set; }
-		public Role[] MentionRoles { get; set; }
+		public ulong[] MentionRoles { get; set; }
 		public Channel[] MentionChannels { get; set; }
 		public Attachment[] Attachments { get; set; }
 		public Embed[] Embeds { get; set; } 

@@ -10,15 +10,15 @@ namespace Discordcs.Core.Interfaces
 		public ulong Id { get; set; }
 		[JsonConverter(typeof(SmartEnumValueConverter<ChannelTypeEnum, ushort>))]
 		public ChannelTypeEnum Type { get; set; }
-		public ulong GuildId { get; set; }
-		public int Position { get; set; }
+		public ulong? GuildId { get; set; }
+		public uint? Position { get; set; }
 		public string Name { get; set; }
 		public string Topic { get; set; }
 		public bool Nsfw { get; set; }
 		public ulong? LastMessageId { get; set; }
-		public int? Bitrate { get; set; }
-		public int? UserLimit { get; set; }
-		public int? RateLimitPerUser { get; set; }
+		public uint? Bitrate { get; set; }
+		public uint? UserLimit { get; set; }
+		public uint? RateLimitPerUser { get; set; }
 		public string Icon { get; set; }
 		public ulong? OwnerId { get; set; }
 		public ulong? ApplicationId { get; set; }

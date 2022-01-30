@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.SmartEnum.JsonNet;
 using Discordcs.Core.Enums;
+using Discordcs.Core.Interfaces;
 using Newtonsoft.Json;
 
 namespace Discordcs.Core.Models
 {
-    public class Message
+    public class Message : IMessage
     {
         public ulong Id { get; set; }
 		public ulong ChannelId { get; set; }
@@ -17,11 +18,11 @@ namespace Discordcs.Core.Models
 		public GuildMember Member { get; set; }
 		public string Content { get; set; }
 		public DateTimeOffset Timestamp { get; set; }
-		public DateTimeOffset EditedTimestamp { get; set; }
+		public DateTimeOffset? EditedTimestamp { get; set; }
 		public bool TTS { get; set; }
 		public bool MentionEveryone { get; set; }
 		public User[] Mentions { get; set; }
-		public Role[] MentionRoles { get; set; }
+		public ulong[] MentionRoles { get; set; }
 		public Channel[] MentionChannels { get; set; }
 		public Attachment[] Attachments { get; set; }
 		public Embed[] Embeds { get; set; } 

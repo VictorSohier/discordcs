@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using System;
-using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
-namespace Discordcs.test.auditLog
+namespace Discordcs.Test
 {
 	[TestClass]
 	public class AuditLogTest
@@ -32,9 +32,9 @@ namespace Discordcs.test.auditLog
 		}
 
 		[TestMethod]
-		public void GetAuditLog()
+		public async Task GetAuditLog()
 		{
-			IAuditLog auditLog = _discord.GetGuildAuditLog(_guildId).Result;
+			IAuditLog auditLog = await _discord.GetGuildAuditLog(_guildId);
 			Console.WriteLine(JsonConvert.SerializeObject(auditLog, settings));
 			Assert.IsInstanceOfType(auditLog, typeof(AuditLog));
 		}
